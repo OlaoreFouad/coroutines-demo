@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+
+	<import type="dev.iamfoodie.coroutinesdemo.utils.Utils" />
+	<import type="android.view.View" />
+
+	<variable
+	  name="jobIsComplete"
+	  type="Boolean" />
+
+	<variable
+	  name="isExecuting"
+	  type="Boolean" />
+
+  </data>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".JobActivity">
+
+	<androidx.constraintlayout.widget.Guideline
+	  android:id="@+id/top_guideline"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:orientation="horizontal"
+	  app:layout_constraintGuide_begin="16dp" />
+
+	<androidx.constraintlayout.widget.Guideline
+	  android:id="@+id/start_guideline"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:orientation="vertical"
+	  app:layout_constraintGuide_begin="16dp" />
+
+	<androidx.constraintlayout.widget.Guideline
+	  android:id="@+id/end_guideline"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:orientation="vertical"
+	  app:layout_constraintGuide_end="16dp" />
+
+	<ProgressBar
+	  android:id="@+id/progress_bar"
+	  style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+	  android:layout_width="0dp"
+	  android:max="10"
+	  tools:progress="6"
+	  android:layout_height="wrap_content"
+	  app:layout_constraintEnd_toEndOf="@id/end_guideline"
+	  app:layout_constraintStart_toStartOf="@id/start_guideline"
+	  app:layout_constraintTop_toBottomOf="@id/top_guideline" />
+
+	<Button
+	  android:id="@+id/start_job_button"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:layout_marginTop="10dp"
+	  android:text="@{ isExecuting ? @string/cancel_job_text : @string/start_job_text }"
+	  app:layout_constraintEnd_toEndOf="parent"
+	  app:layout_constraintStart_toStartOf="parent"
+	  app:layout_constraintTop_toBottomOf="@id/progress_bar" />
+
+	<TextView
+	  android:id="@+id/job_is_complete_text"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:layout_marginTop="10dp"
+	  android:fontFamily="@font/roboto_bold"
+	  android:text="@string/job_is_complete_text"
+	  android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+	  android:textColor="@android:color/black"
+	  android:visibility="@{ jobIsComplete ? View.VISIBLE : View.GONE }"
+	  app:layout_constraintEnd_toEndOf="parent"
+	  app:layout_constraintStart_toStartOf="parent"
+	  app:layout_constraintTop_toBottomOf="@id/start_job_button" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
