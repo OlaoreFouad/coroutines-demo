@@ -1,9 +1,11 @@
 <resources>
-  <string name="app_name">Coroutines Demo</string>
-  <string name="fetch_text">Fetch</string>
-  <string name="result_placeholder_text">Result</string>
-  <string name="start_job_text">Start Job</string>
-  <string name="cancel_job_text">Cancel Job</string>
-  <string name="job_is_complete_text">Job Is Complete</string>
-  <string name="jobs">Jobs</string>
+    <string name="app_name">Coroutines Demo</string>
+    <string name="fetch_text">Fetch</string>
+    <string name="result_placeholder_text">Result</string>
+    <string name="start_job_text">Start Job</string>
+    <string name="cancel_job_text">Cancel Job</string>
+    <string name="job_is_complete_text">Job Is Complete</string>
+    <string name="jobs">Jobs</string>
+  <string name="parallel_text">Parallel</string>
+    <string name="run_text">Run</string>
 </resources>

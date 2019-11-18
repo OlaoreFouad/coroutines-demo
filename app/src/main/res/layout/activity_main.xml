@@ -7,35 +7,46 @@
   tools:context=".MainActivity">
 
   <Button
+	android:id="@+id/fetch_button"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
 	android:text="@string/fetch_text"
-	android:id="@+id/fetch_button"
-	app:layout_constraintStart_toStartOf="parent"
-	app:layout_constraintEnd_toEndOf="parent"
-	app:layout_constraintTop_toTopOf="parent"
 	app:layout_constraintBottom_toBottomOf="parent"
-	app:layout_constraintVertical_bias=".3"/>
+	app:layout_constraintEnd_toEndOf="parent"
+	app:layout_constraintStart_toStartOf="parent"
+	app:layout_constraintTop_toTopOf="parent"
+	app:layout_constraintVertical_bias=".3" />
 
   <TextView
+	android:id="@+id/result"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
-	tools:text="@string/result_placeholder_text"
-	android:id="@+id/result"
-	app:layout_constraintStart_toStartOf="parent"
-	app:layout_constraintEnd_toEndOf="parent"
+	android:layout_marginTop="30dp"
 	android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+	app:layout_constraintEnd_toEndOf="parent"
+	app:layout_constraintStart_toStartOf="parent"
 	app:layout_constraintTop_toBottomOf="@id/fetch_button"
-	android:layout_marginTop="30dp"/>
+	tools:text="@string/result_placeholder_text" />
+
+  <Button
+	android:id="@+id/job_button"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_marginBottom="10dp"
+	android:text="@string/jobs"
+	app:layout_constraintBottom_toBottomOf="parent"
+	app:layout_constraintHorizontal_chainStyle="packed"
+	app:layout_constraintEnd_toStartOf="@id/parallel_button"
+	app:layout_constraintStart_toStartOf="parent" />
 
   <Button
 	android:layout_width="wrap_content"
-	android:layout_height="wrap_content"
-	android:id="@+id/job_button"
-	app:layout_constraintBottom_toBottomOf="parent"
-	app:layout_constraintStart_toStartOf="parent"
-	app:layout_constraintEnd_toEndOf="parent"
+	android:text="@string/parallel_text"
+	android:id="@+id/parallel_button"
 	android:layout_marginBottom="10dp"
-	android:text="@string/jobs"/>
+	app:layout_constraintStart_toEndOf="@id/job_button"
+	app:layout_constraintBottom_toBottomOf="parent"
+	app:layout_constraintEnd_toEndOf="parent"
+	android:layout_height="wrap_content" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
