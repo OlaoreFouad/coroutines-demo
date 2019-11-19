@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         job_button.setOnClickListener { startActivity(Intent(this@MainActivity, JobActivity::class.java)) }
         parallel_button.setOnClickListener { startActivity(Intent(this@MainActivity, ParallelActivity::class.java)) }
+
     }
 
     private suspend fun fakeApiRequest() {

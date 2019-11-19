@@ -32,21 +32,35 @@
 	android:id="@+id/job_button"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
-	android:layout_marginBottom="10dp"
 	android:text="@string/jobs"
-	app:layout_constraintBottom_toBottomOf="parent"
-	app:layout_constraintHorizontal_chainStyle="packed"
+	app:layout_constraintBottom_toTopOf="@id/bottom_guideline"
 	app:layout_constraintEnd_toStartOf="@id/parallel_button"
+	app:layout_constraintHorizontal_chainStyle="packed"
 	app:layout_constraintStart_toStartOf="parent" />
 
   <Button
-	android:layout_width="wrap_content"
-	android:text="@string/parallel_text"
 	android:id="@+id/parallel_button"
-	android:layout_marginBottom="10dp"
-	app:layout_constraintStart_toEndOf="@id/job_button"
-	app:layout_constraintBottom_toBottomOf="parent"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="@string/parallel_text"
+	app:layout_constraintBottom_toTopOf="@id/bottom_guideline"
+	app:layout_constraintEnd_toStartOf="@id/sequential_button"
+	app:layout_constraintStart_toEndOf="@id/job_button" />
+
+  <Button
+	android:id="@+id/sequential_button"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="@string/sequential_text"
+	app:layout_constraintBottom_toTopOf="@id/bottom_guideline"
 	app:layout_constraintEnd_toEndOf="parent"
-	android:layout_height="wrap_content" />
+	app:layout_constraintStart_toEndOf="@id/parallel_button" />
+
+  <androidx.constraintlayout.widget.Guideline
+	android:id="@+id/bottom_guideline"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal"
+	app:layout_constraintGuide_end="10dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
