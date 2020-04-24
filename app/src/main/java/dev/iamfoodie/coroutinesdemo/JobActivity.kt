@@ -62,6 +62,7 @@ class JobActivity : AppCompatActivity() {
     private fun resetJob() {
         if (job.isActive || job.isCompleted) {
             job.cancel(CancellationException("Job is cancelled!"))
+            progress_bar.progress = 0
         }
         showToast("Resetting Job...")
         initJob()
